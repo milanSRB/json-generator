@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# JSON Editor
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It's an example of JSON editor, written in React with Typescript.
+Other major libraries used are Material UI, Mobx as state management.
+
+### ESLint Rules
+
+* `airbnb` Most commonly used set of rules for Javascript
+* `plugin:react/recommended` standardised recommended rules for React
+* `no-use-before-define` disabling base rule to prevent incorrect errors. More [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md)
+* `react/jsx-filename-extension` In order for ESLint to be happy about JSX inside Typescript files
+* `no-nested-ternary` No nested ternary expressions for better readability
 
 ## Available Scripts
 
