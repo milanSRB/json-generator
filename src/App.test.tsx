@@ -2,8 +2,10 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders links', () => {
   render(<App />);
-  const textElement = screen.getByText(/Hi there/);
-  expect(textElement).toBeInTheDocument();
+  const linkUpload = screen.getByText(/UPLOAD JSON/i);
+  const linkEdit = screen.getByText(/EDIT JSON/i);
+  expect(linkUpload).toBeInTheDocument();
+  expect(linkEdit).toBeInTheDocument();
 });

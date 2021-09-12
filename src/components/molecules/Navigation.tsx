@@ -8,6 +8,9 @@ const useStyles = makeStyles(() => ({
         marginRight: "10px",
         textDecoration: "none",
         color: "#fff",
+        '&:hover': {
+            color: "#ccc"
+        }
     },
 }));
 

@@ -8,7 +8,7 @@ import Navigation from './components/molecules/Navigation';
 
 import './App.css';
 
-function App() {
+function App(props) {
     return (
         <Router>
             <Navigation />
@@ -16,6 +16,8 @@ function App() {
                 <Route path="/edit" component={EditPage}/>
                 <Route path="/" component={UploadPage}/>
             </Switch>
+            {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
+            {props.children}
         </Router>
     );
 }
