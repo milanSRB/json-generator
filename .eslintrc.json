@@ -3,6 +3,13 @@
         "browser": true,
         "es2021": true
     },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": ["src",".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
     "extends": [
         "plugin:react/recommended",
         "airbnb",
@@ -27,6 +34,27 @@
         // in order for ESLint to be happy about JSX inside Typescript files
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         // no nested ternary expressions because of readability
-        "no-nested-ternary": [2]
-    }
+        "no-nested-ternary": [2],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.test.tsx",
+                "**/*.test.ts"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 }
